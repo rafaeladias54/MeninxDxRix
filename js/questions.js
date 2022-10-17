@@ -90,18 +90,18 @@ let questions = [
     correct: "Muito perspicaz! Escolhe um jogador para ter a alcunha de “sardinha”. Todos se devem dirigir ao jogador pela alcunha. Caso não o façam, devem beber.",
     incorrect: "Que pena... O nome que disseste torna-se agora a tua alcunha. Todos se devem dirigir a ti pela alcunha. Caso não o façam, devem beber."
   },
-  {
-  numb: 8,
-  question: "Na era do Paleozoico, qual dos seguintes Períodos é o mais antigo?",
-  answer: "Ordovícico",
-  options: [
-    "Devónico",
-    "Ordovícico",
-    "Pérmico",
-    "Silúrico"
-  ],
-  correct: "Parabéns! Agora escolhe um jogador para voltar atrás no tempo e recuar 15 casas.",
-  incorrect: "Too bad... Voltas atrás no tempo e recuas 8 casas."
+    {
+    numb: 8,
+    question: "Na era do Paleozoico, qual dos seguintes Períodos é o mais antigo?",
+    answer: "Ordovícico",
+    options: [
+      "Devónico",
+      "Ordovícico",
+      "Pérmico",
+      "Silúrico"
+    ],
+    correct: "Parabéns! Agora escolhe um jogador para voltar atrás no tempo e recuar 15 casas.",
+    incorrect: "Too bad... Voltas atrás no tempo e recuas 8 casas."
   },
   {
   numb: 9,
@@ -1180,7 +1180,7 @@ let questions = [
     "5 triliões"
   ],
   correct: "Escolhe 3 pessoas para fazerem twerk ao som de uma música à tua escolha.",
-  incorrect: "Esfrega maionese/ketchup/mostarda nas mãos e não as limpes durante 1 ronda."
+  incorrect: "Esfrega maionese, ketchup ou mostarda nas mãos e não as limpes durante 1 ronda."
   },
   {
   numb: 92,

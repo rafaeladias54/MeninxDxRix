@@ -7,8 +7,31 @@ const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
 
+if (sessionStorage.getItem("no_repeat") === null) {
+    
+    let no_repeat = [];
+    var i = 0;
+
+    while (i < questions.length) {
+        no_repeat[i] = i;
+        i++;
+    }
+
+    console.log(no_repeat);
+    sessionStorage.setItem("no_repeat", JSON.stringify(no_repeat));
+}
+
+let no_repeat = JSON.parse(sessionStorage.getItem('no_repeat'));
+console.log(no_repeat);
+
 let que_numb = questions.length;
 let que_count = Math.floor(Math.random() * que_numb);
+
+while (no_repeat[que_count] == null) {
+    que_count = Math.floor(Math.random() * que_numb);
+    console.log("repeat");
+}
+
 let userScore = 0;
 let counter;
 let counterLine;
@@ -23,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     info_box.classList.remove("activeInfo"); //hide info box
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(que_count); //calling showQestions function
-    console.log("olaaaa" + que_count);
+    console.log("question " + que_count);
 }, false);
 
 const restart_quiz = result_box.querySelector(".buttons .restart");
@@ -41,6 +64,9 @@ restart_quiz.onclick = ()=>{
 
 // if quitQuiz button clicked
 quit_quiz.onclick = ()=>{
+    no_repeat[que_count] = null;
+    sessionStorage.setItem("no_repeat", JSON.stringify(no_repeat));
+
     window.location.reload(); //reload the current window
 }
 
